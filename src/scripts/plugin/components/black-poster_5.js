@@ -1,7 +1,9 @@
 'use strict';
 
-var baseVideoJsComponent = videojs.getComponent('Component');
+module.exports = videojs => {
+    var baseVideoJsComponent = videojs.getComponent('Component');
 
-var BlackPoster = require('./black-poster')(baseVideoJsComponent);
+    var BlackPoster = require('./black-poster')(baseVideoJsComponent);
 
-videojs.registerComponent('BlackPoster', videojs.extend(baseVideoJsComponent, BlackPoster));
+    videojs.registerComponent('BlackPoster', videojs.extend(baseVideoJsComponent, BlackPoster));
+};

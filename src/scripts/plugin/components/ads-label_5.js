@@ -1,7 +1,9 @@
 'use strict';
 
-var baseVideoJsComponent = videojs.getComponent('Component');
+module.exports = (videojs) => {
+    var baseVideoJsComponent = videojs.getComponent('Component');
 
-var AdsLabel = require('./ads-label')(baseVideoJsComponent);
+    var AdsLabel = require('./ads-label')(baseVideoJsComponent);
 
-videojs.registerComponent('AdsLabel', videojs.extend(baseVideoJsComponent, AdsLabel));
+    videojs.registerComponent('AdsLabel', videojs.extend(baseVideoJsComponent, AdsLabel));
+};
